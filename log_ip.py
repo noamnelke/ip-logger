@@ -21,5 +21,4 @@ now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 if wks.cell(2, 3).value == ip:
     wks.update_cell(2, 2, now)
 else:
-    wks.insert_row([now, now, ip], 2)
-
+    wks.insert_row([now, now, ip], index=2, value_input_option="USER_ENTERED")
