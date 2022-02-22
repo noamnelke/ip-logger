@@ -1,7 +1,7 @@
 # IP Logger
 A small tool for logging your IP address to a Google Sheet.
 
-It's intended to be run as a cron job.
+It's intended to be run as a cron job and/or on every network connection.
 
 ## Setup
 
@@ -17,3 +17,8 @@ To make the spreadsheet human readable, add a header row with the following head
 You can leave the rest of the spreadsheet empty.
 
 When the script is executed it inserts a row with the current timestamp and external IP. If the last (top) IP is the same as what was detected, instead of inserting a row, the script updates the "Last seen" time.
+
+## Execution
+To execute the script, from the script directory, run `python log_ip.py`.
+
+To do it automatically add a cron job and/or a hook on network connection. To set this up automatically on Linux systems, just run `sudo ./install.sh`.
