@@ -18,6 +18,22 @@ You can leave the rest of the spreadsheet empty.
 
 When the script is executed it inserts a row with the current timestamp and external IP. If the last (top) IP is the same as what was detected, instead of inserting a row, the script updates the "Last seen" time.
 
+### Environment setup
+Create a virtualenv:
+```sh
+python -m venv venv
+```
+
+Activate the virtualenv:
+```sh
+source venv/bin/activate
+```
+
+Install the requirements:
+```sh
+pip install -r requirements.txt
+```
+
 ## Execution
 To execute the script, from the script directory, run `python log_ip.py`.
 
